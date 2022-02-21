@@ -65,7 +65,6 @@ $(document).ready(() => {
             const characterId = characterInfo.getAttribute('id');
             removeCharacterById(characterId);
         }
-    
     });
     
     // Next clicking
