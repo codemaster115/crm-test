@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.characters{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.character{
+    position: relative;
+    height: 220px;
+    width: 180px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.character img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.character-info{
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    height: 40px;
+}
+
+.character-info p{
+  width: 100px;
+  line-height: 1.2;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.character-info:hover{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#heading {
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#heading img {
+  height: 50px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.cta{
+    margin: 30px 0;
+    width: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta button{
+    cursor: pointer;
+}
+
+
+@media(max-width: 960px){
+    .characters{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .character{
+        height: 225px;
+        width: 225px;
+    }
+
+    .character img{
+      height: 170px;
+  }
+}
+
+@media(max-width: 800px){
+    .characters{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .character{
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media(max-width: 600px){
+    .characters{
+        grid-template-columns: 1fr;
+    }
+
+    .character{
+        height: 300px;
+        width: 300px;
+    }
+
+    .character img{
+      height: 230px;
+  }
+
+    #heading {
+      justify-content: center;
+    }
+}
